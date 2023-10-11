@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CSS Template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			box-sizing: border-box;
+			border: border-box;
+		}
+
+		body {
+			font-family: Helvetica, sans-serif;
+			color: #0E223F
+		}
+
+		/* Style the header */
+
+		.header {
+			background-color: #132132;
+			padding: 15px;
+			font-size: 35px;
+			color: white;
+			display: flex;
+		}
+
+		/* Container for flexboxes */
+		section {
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		/* Style the navigation menu */
+		nav {
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			background: #fafbfc;
+			padding: 20px;
+
+		}
+
+
+		.pointer {
+			border: 2px solid transparent;
+		}
+
+		.pointer:hover {
+			border: 1.5px solid rgb(236, 14, 14);
+			font-weight: 25px;
+		}
+
+		.pointer a {
+			text-decoration: none;
+		}
+
+		/* Style the list inside the menu */
+		nav ul {
+			list-style-type: none;
+			padding-left: 10;
+		}
+
+		/* Style the content */
+		article {
+			-webkit-flex: 3;
+			-ms-flex: 3;
+			flex: 3;
+			background-color: white;
+			padding: 10px;
+		}
+
+		.headColor {
+			color: #0845A2;
+		}
+
+		.heading {
+			font-size: 24px;
+			color: #0845A2;
+			text-align: center;
+		}
+
+		p.ex1 {
+			padding-left: 30px;
+
+		}
+
+		/* Style the footer */
+		footer {
+			background-color: #132132;
+			padding: 10px;
+			text-align: center;
+			color: white;
+		}
+
+		/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+		@media (max-width: 600px) {
+			section {
+				-webkit-flex-direction: column;
+				flex-direction: column;
+			}
+		}
+	</style>
+</head>
+
+<!--------HTML code-->
+
+<body>
+
+	<header class="header">
+		<div>
+			<img src="logo.png" alt="RecVue logo">
+		</div>
+	</header>
+
+	<section>
+		<nav>
+			<h3>Table Contents</h3>
+			<ul>
+				<li class="pointer"><a href="#L1">What's New</a>
+					<ul>
+						<li class="pointer"><a href="#L2">Customer Price Index (CPI)</a></li>
+						<li class="pointer"><a href="#L5">Asset As a Service</a></li>
+						<li class="pointer"><a href="#L6">Billing Management</a></li>
+						<li class="pointer"><a href="#L10">Partner Settlement</a></li>
+						<li class="pointer"><a href="#L11">Revenue Management</a></li>
+						<li class="pointer"><a href="#L12">Others</a></li>
+					</ul>
+
+				</li>
+				<li class="pointer"><a href="#C1">What's Changed</a>
+					<ul>
+						<li class="pointer"><a href="#C2">Order Management</a></li>
+						<li class="pointer"><a href="#C3">Reports and Analytics</a></li>
+						<li class="pointer"><a href="#C4">Partner Settlement</a></li>
+					</ul>
+				</li>
+				<li class="pointer"><a href="#F1">What's Fixed</a>
+					<ul>
+						<li class="pointer"><a href="#F2">Billing Management</a></li>
+						<li class="pointer"><a href="#F3">Order Management</a></li>
+						<li class="pointer"><a href="#F4">Reports and Analytics</a></li>
+						<li class="pointer"><a href="#F5">Others</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<article>
+
+			<h2 class="heading">RECVUE'S RELEASE NOTES 23.4</h2>
+
+			<div style="text-align: right">
+				<figure>
+					<a href="./RECVUE R23.4 - Release Notes.pdf" download="RECVUE R23.4 - Release Notes.pdf">
+						<img src=" pdf.png" alt="PDF" width=25 height=30>
+						<figcaption style="font-size: 8px;">Download</figcaption>
+					</a>
+				</figure>
+			</div>
+
+			<div class="content"></div>
+			<h2 class="headColor" id="L1">What's New</h2>
+			<p class="ex1">The following are enhancements/new features in the product organized into the different
+				modules of RecVue.</p>
+
+			<h3 class="headColor" id="L2">Customer Price Index (CPI)</h3>
+
+			<p class="ex1"><b class="headColor">CPI for MLM</b>: CPI compatibility has now been extended to Multi Line
+				Minimum product lines, just like it has for recurring and usage products. As a result, the application
+				has been enhanced as follows.</P>
+			<ul>
+				<li>Provided the CPI tab in the sub-tab menu of the billing tab in the MLM Product Line UI.</li>
+				<li>Supports the price uplift of MLM lines.<br><br>
+					<img src="./Image1.png" width=884 height=413;>
+				</li>
+			</ul>
+
+			<p class="ex1"><b class="headColor">CPI Audit Report</b>: Provided a separate report called 'CPI Audit
+				Report' to view all previous CPI transactions' details. The CPI Audit Details report option has been
+				added to the Actions button in the Product Line UI.</p>
+			<ul>
+				<li>It will be displayed in a separate window.</li>
+				<li>It contains columns such as the action, audit date, order number, adjustment type, line number,
+					column name, and product name.</li>
+				<li>Provides an Excel file download option in your local system explorer.<br><br>
+					<img src="./Image2.png" width=884 height=413;>
+				</li>
+			</ul>
+
+			<h3 class="headColor" ID="L5">Asset-as-a-Service</h3>
+
+			<p class="ex1">RecVue enhanced with the Asset-as-a-Service (AaaS) feature. 'With this, an asset rule may be
+				defined against an asset (such as equipment, machinery, containers, vehicles, etc.). Charges will be
+				generated for movement depending on the specification of the asset rule. For more details, please
+				contact the RecVue support team.</p>
+
+			<h3 class="headColor" id="L6">Billing Management</h3>
+
+			<p class="ex1"><b class="headColor">Exclude from Billing</b>: Provided an option that users can skip
+				specific orders or product lines from the billing. The 'Do not Bill' checkbox has been added to the
+				Billing Details tab screen in both the Product Line UI and Order Header UI. To exclude a specific order
+				or line, the user must select this option. To exclude a specific order or line, the user must select
+				this option.</p>
+
+			<p class="ex1">Refer to the image for the <b>‘Do not Bill’</b> option in the Order Header UI:<br><br>
+				<img src="./Image3.png" width=884 height=413;>
+			</p>
+
+			<p class="ex1">Refer to the image below for the <b>‘Do not Bill’</b> option in the Product Line UI:<br><br>
+				<img src="./Image4.png" width=884 height=413;>
+			</p>
+
+
+			<p class="ex1"><b class="headColor">MLM - Event Hold</b>: Previously, the parent line of Multi-Line Minimum
+				[MLM] could not create billing schedules if one of its associated lines was applied to an event hold
+				until the hold was lifted.</p>
+
+			<p class="ex1">Now the MLM parent line can still create billing schedules even if one of its associated
+				lines is applied to an event hold. It skips the specific child line that is on event hold and creates
+				billing schedules for the remaining lines. Provided a profile option to use this option. For more
+				information, please contact the RecVue support team.</p>
+
+			<p class="ex1"><b class="headColor">MLM Overage</b>: In the Product Line UI, provided a MLM Overage
+				checkbox. If the user selects the checkbox, the MLM will be considered as maximum threshold amount. Each
+				month the billing amount of child lines is less than the MLM threshold nothing will be billed, or else,
+				the delta amount will be billed.<br><br>
+				<img src="./Image5.png" width=884 height=413;>
+			</p>
+
+			<h3 class="headColor" id="L10">Partner Settlement</h3>
+
+			<p class="ex1"><b class="headColor">Payable Manual Adjustments Report</b>: Recent releases introduced the
+				payment adjustments function to create manual debit and credit memos. In this release, we added the
+				'Payable Manual Adjustments' report, which provides data on credit and debit memos
+				based on business units. To generate the report, the "Payable Manual Adjustments" report tile was added
+				to the Reports UI. <br><br>
+				<img src="./Image6.png" width=884 height=413;>
+			</p>
+
+			<p class="ex1"><b class="headColor">Payment Adjustments</b>: In the Adjustments UI, the following two
+				buttons are added:</p>
+
+			<ul>
+				<li><u class="headColor">Submit</u>: It is useful to pick several adjustments and submit them all at
+					once.</li>
+				<li><u class="headColor">Delete</u>: It is useful to delete bulk adjustments that are in draft status
+					with a single click.
+				</li>
+			</ul>
+
+			<p class="ex1"><b class="headColor"> Asset Re-Numbering</b>: The asset module now supports renumbering the
+				asset and making payments accordingly. Renumbering means the unique identifier for the asset, which is
+				EQPD (equipment ID and external field), and API-KEY (internal field), are changed to another set of
+				values. This is tracked via asset versioning.</p>
+
+			<p class="ex1">A few changes occurred in the following UIs. For more details, please contact the RecVue
+				support team.</p>
+			<ul>
+				<li>Fulfilments</li>
+				<li>Payments Schedules</li>
+				<li>Payment Lines</li>
+			</ul>
+
+			<p class="ex1"><b class="headColor">Order Payment Lines</b>: Provided sorting icons for date columns (Period
+				From and Period To) in the Order Payment Lines window of the Parter Payment Lines UI. A button is added
+				with an Excel icon that allows users to download the information about order payment lines into an Excel
+				file.</p>
+
+			<p class="ex1"><b class="headColor">Pay Run - KPI</b>: The Key Performance Indicator [KPI] in the Pay Run UI
+				has been enhanced with additional information.</p>
+
+			<ul>
+				<li>Vendors</li>
+				<li>Orders</li>
+				<li>Total Amount</li>
+				<li>Paid Amount</li>
+				<li>Invoices’ Amount</li>
+			</ul>
+
+			<h3 class="headColor" id="L11">Revenue Management</h3>
+
+			<p class="ex1">Reports are generating currently based on order ID, users have the option to provide a single
+				order number. We have now provided a multi-select option in the order ID field to generate a report for
+				multiple orders. <br><br>
+				<img src="./Image7.png" width=884 height=413;>
+			</p>
+
+			<h3 class="headColor" id="L12">Others</h3>
+
+			<ul>
+				<li>The search function in the Manage Users UI now returns results based on the search criteria of Email
+					ID, User First Name, and User Last Name. <br><br>
+					<img src="./Image8.png" width=884 height=413;>
+				</li>
+				<li>The user-specific field `Event Type' (Line Tax Code) available in the Billing tab (Billing
+					Term screen) of the Product Line UI now also appears as one of the list options values in the
+					advanced search of the Order Search UI on the line level. It shows the LOV values of the event type
+					field in a separate column where the user can use the filter option and download the details in an
+					Excel or CSV file.
+
+				</li>
+			</ul>
+
+			<p class="ex1">The user-specific field `Event Type' (Line Tax Code) available in the Billing tab (Billing
+				Term screen) of the Product Line UI now also appears as one of the list options values in the advanced
+				search of the Order Search UI on the line level.
+				It shows the LOV values of the event type field in a separate column where the user can use the filter
+				option and download the details in an Excel or CSV file.
+
+			</p>
+
+
+			<!-----What's changed---------->
+
+			<h2 class="headColor" id="C1">What’s Changed</h2>
+
+			<p class="ex1">The following features are modified in the product organized by different modules of RecVue.
+			</p>
+
+			<h3 class="headColor" id="C2">Order Management</h3>
+
+			<p class="ex1"><b>Current Functionality</b>: The scope of mass updating product lines is limited to 10.</p>
+			<p class="ex1"><b class="headColor">Change</b>: The scope of mass updating product lines extended up to 100
+				product lines at a time.</p>
+
+			<p class="ex1"><b>Current Functionality</b>: The log file will be created after the Process Amendments
+				program runs successfully from the Requests UI. A log file is created with the order ID and amendment
+				details.
+			<p>
+
+			<p class="ex1"><b class="headColor">Change</b>: To provide more clarity to consumers, the generated log file
+				now includes order numbers instead of order IDs.</p>
+
+			<h3 class="headColor" id="C3">Reports and Analytics</h3>
+
+			<p class="ex1"><b>Current Functionality</b>: The user-specific monthly billing MRC NRC report is generated
+				based on the legal entity.</p>
+
+			<p class="ex1"><b class="headColor">Change</b>: The monthly billing MRC NRC report is now generated based on
+				the business unit.</p>
+
+			<p class="ex1"><b>Current Functionality</b>: Currently, only the last run date is defaulted when users run
+				incremental reports through the UI.</p>
+
+			<p class="ex1"><b class="headColor">Change</b>The incremental reports now run based on the last run date and
+				the last run time as well.</p>
+
+			<h3 class="headColor" id="C4">Partner Settlement</h3>
+
+			<p class="ex1"><b>Current Functionality</b>: When the pay run is in the review state, users can view the
+				Order# and Pay Amount columns in the Paying UI. If users want more details about a specific order or
+				payment amount, they must open them in separate UIs.
+			<p class="ex1"><b class="headColor">Change</b>: A hyperlink is provided for each value in the columns of
+				Order# and Pay Amount. When the user clicks the link, a new window opens with relevant information.</p>
+
+
+			<!-------What's Fixed--------------->
+
+
+			<h2 class="headColor" id="F1">What’s Fixed</h2>
+
+			<p class="ex1">The following are fixes and corrections in the product organized by the different modules of
+				RecVue.</p>
+
+			<h3 class="headColor" id="F2">Billing Management</h3>
+
+			<p class="ex1"><b>Issue</b>: After upgrading to the most recent release, the prebill functionality was not
+				working as expected.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been fixed, and the prebill capability is now
+				operational.</p>
+
+			<p class="ex1"><b>Issue</b>: There was an issue with creating an order using the Create Order API call.</b>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been fixed, and the post API is now creating an
+				order as intended.
+			</p>
+
+			<p class="ex1"><b>Issue</b>: Line start and end dates, event hold dates, and event release dates were all
+				out of sync. The original start and end dates of the term still apply when an event is released, and
+				price terms are enabled on the line.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been resolved. According to the event release
+				date, the term start and end dates are updated and modified.</b>
+
+
+			<h3 class="headColor" id="F3">Order Management</h3>
+
+			<p class="ex1"><b>Issue</b>: The Usages Workbench's export feature was not functioning correctly. The data
+				fails to appear when the user tries to export data using the export button to deliver import.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been fixed, and now the export functionality in
+				Workbench is
+				functioning correctly.</p>
+
+			<p class="ex1"><b>Issue</b>: Duplicate records were produced when importing customer data using the imports
+				capability. The same thing occurred even after upgrading the existing data.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been resolved, and the importing feature is now
+				operational.</p>
+
+			<p class="ex1"><b>Issue</b>: An order should show up with a 'reactivate’ status after being copied, but this
+				didn't occur until the order was refreshed.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been resolved and copy order functionality is
+				working properly.</p>
+
+			<p class="ex1"><b>Issue</b>: TThe adjustment amount in the Adjustment UI displayed improperly due to an
+				error in calculating the sum of debit and credit memos.</p>
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been fixed. Now, the adjustment amount is
+				displayed correctly. The total of the debit memos is shown as the adjustment amount since the credit
+				memos are negative.
+
+			</p>
+
+			<p class="ex1"><b>Issue</b>: There was an issue in the amendment process. The amendment order will be
+				created with a new number.
+				If it is again amended, then the old account details will appear in the error log files.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been resolved. The amendment process is now
+				working properly.</p>
+
+			<h3 class="headColor" id="F4">Reports and Analytics</h3>
+
+			<p class="ex1"><b>Issue</b>: When the customer's name in the order line and order header level are
+				different, there was a search
+				issue in the Order Details Report.</p>
+
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been resolved.</p>
+
+			<h3 class="headColor" id="F5">Others</h3>
+
+			<p class="ex1"><b>Issue</b>: It shows unexpected errors in the application if the user repeatedly opens
+				specific user information in the User Management
+				Settings UI.</p>
+			<p class="ex1"><b class="headColor">Fix</b>: The issue has been resolved.</p>
+
+		</article>
+	</section>
+
+	<footer>
+		<p>Copyright ©23-2024 RECVUE, Inc. All rights reserved. All trademarks, trade names, service marks, and logos
+			referenced herein belong to their respective companies.</p>
+	</footer>
+
+</body>
+
+</html>
